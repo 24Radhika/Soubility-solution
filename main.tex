@@ -1,0 +1,99 @@
+\documentclass[20pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{geometry}
+\geometry{
+  left=0.5in,
+  right=0.5in,
+  top=0.5in,
+  bottom=0.5in,
+  }
+\title{Varience Of Solubility With Different Variable}
+\author{Radhika Gupta\\Roll no. 23GG61R14\\Geology and geophysics}
+\date{November 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Objective}
+To know the relationship between the solubility (predicted and observed) and different parameters such as Minimum Degree,	Molecular Weight, Number of H-Bond Donors, Number of Rings, Number of Rotatable Bonds and Polar Surface Area.
+\section{Introduction}
+Solubility, a critical property in the realm of chemistry and pharmaceutical sciences, refers to the ability of a substance to dissolve in a particular solvent under specific conditions. Understanding the factors that influence solubility is paramount, as it plays a pivotal role in various industrial processes, drug development, environmental science, and material science.
+
+In this report, we delve into the exploration of the relationship between solubility, both predicted and observed, and various molecular parameters. Our investigation focuses on key factors such as Minimum Degree, Molecular Weight, Number of H-Bond Donors, Number of Rings, Number of Rotatable Bonds, and Polar Surface Area. Employing a straightforward approach, we utilize simple scatter plots to visually represent and analyze the correlations between these parameters and solubility. By examining these fundamental molecular characteristics, we aim to uncover insights into the factors influencing solubility, providing a comprehensive understanding of the interplay between molecular structure and solubility outcomes.
+
+\section{Methodology}
+\subsection*{Data Collection}
+
+The dataset for this analysis was sourced from a GitHub repository, accessible through the link \url{https://raw.githubusercontent.com/GLambard/Molecules_Dataset_Collection/master/latest/ESOL_delaney-processed.csv}.
+
+\begin{itemize}
+    \item The dataset, named \texttt{ESOL\_delaney-processed.csv}, contains information on molecular properties.
+    \item Two specific columns were extracted for investigation: 'Molecular Weight' and 'Measured Log Solubility in Mols per Litre.'
+    \item A linear regression model was employed to assess the relationship between Molecular Weight and Measured Log Solubility. We assumed a linear association between the two variables.
+\end{itemize}
+Plots for different parameters were plotted with respect to solubility criteria.\\
+
+\section{Discussion and Conclusion}
+\begin{figure}
+    \centering
+    \includegraphics[width=4in]{minimum degree.png}
+    \caption{Min. degree vs solubility}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=4in]{no. of h_bond.png}
+    \caption{Solubility vs number of H-bond}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=4in]{number of rings.png}
+    \caption{solubility vs number of rings}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=4in]{number of rotational bonds.png}
+    \caption{Solubility vs number of rotational bonds}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=4in]{Polar surface area.png}
+    \caption{Solubility vs Polar surface area}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=4in]{regression plot.png}
+    \caption{Solubility vs molecular wt}
+    \label{fig:enter-label}
+\end{figure}
+The plots are too scattered for all the variables for predicted solubility. However, for parameters such as number of rings, Number of H bonds and for number of rotational bond the range of solubility decreases with increase in these values.Upper limit for these range decreases for Number of rings as well as for number of rotational bonds. So, we can say in general solubility decreases with increase in these parameter.
+
+However the plot for solubility vs Molecular weight the observation is clear cut that the parameter shows the inverse relationship. From the regression line it is clear that predicted solubility is greater than measured one for the molecular weight greater than 160 whereas the measured is more than predicted solubility for molecular weight less than 160. 
+
+Linear regression stands as a versatile and foundational statistical technique, offering a straightforward yet potent framework for comprehending and modeling the connections among variables. With its ease of use, interpretive capabilities, and broad applicability, linear regression proves to be an invaluable instrument in academic research and practical problem-solving scenarios.
+
+
+\begin{figure}
+  \centering
+
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{Histogram 2.png}
+    \caption{Histogram1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{Histogram 2.png}
+    \caption{Histogram2}
+  \end{subfigure}
+  \caption{Parameters}
+\end{figure}
+
+
+
+
+\end{document}
